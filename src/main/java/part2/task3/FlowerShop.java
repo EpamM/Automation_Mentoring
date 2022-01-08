@@ -1,12 +1,14 @@
 package part2.task3;
 
+import org.dom4j.DocumentException;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 
 class FlowerShop {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, DocumentException {
         int totalPrice= 0;
         Bouquet bouquetSetA = new BouquetSetA();
         Bouquet bouquetSetB = new BouquetSetB();
@@ -32,7 +34,7 @@ class FlowerShop {
         }
     }
 
-    private static int getTotalPrice( Bouquet bouquet) throws FileNotFoundException {
+    private static int getTotalPrice( Bouquet bouquet) throws FileNotFoundException, DocumentException {
         int totalPrice=0;
 
         // get ArithmeticException when 被除数是0
